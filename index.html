@@ -5,54 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>movie</title>
+    <!--  Awesome Font link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/api/css/reset.css" />
+    <link rel="stylesheet" href="/api/css/style.css" />
+    <link rel="stylesheet" href="/api/css/media.css" />
   </head>
   <body>
     <div class="wrap">
-      <!-- <div class="movie_box">
-        <img src="" alt="" />
-        <h2>제목 :</h2>
-        <p>감독 :</p>
-        <p>개봉일 :</p>
-        <p>평점 :</p>
-      </div> -->
+      <header class="clear">
+        <ul class="gnb clear">
+          <li><a href="/api/index.html">Home</a></li>
+          <li><a href="#">Recent</a></li>
+          <li><a href="#">Genre</a></li>
+          <li><a href="#">Home</a></li>
+        </ul>
+      </header>
+      <div class="searchBox">
+        <h2>MOVIE SEARCH</h2>
+        <input type="text" class="searchInput" />
+        <button type="button" class="sendBtn">검색</button>
+      </div>
     </div>
     <!-- jquery min  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      $(function () {
-        // let searchValue = document.location.href.split("=")[1];
-        // console.log(searchValue);
-        $.ajax({
-          // $. = 서버와 통신한다
-          type: "POST",
-          url: "/api/data/api.php",
-          success: function (data) {
-            let obj = JSON.parse(data);
-            // console.log(obj);
-            // console.log(obj.items[0].title);
-
-            if (obj.items.length == 0) {
-              alert("데이터가 존재하지 않습니다.");
-              location.href = "/api/index.html";
-            }
-
-            let itemContents = [];
-            // 비어있는 배열 선언
-            $.each(obj.items, function (i, item) {
-              // console.log(item.title);
-              let itemHTML = `<div class="movie_box">
-                              <img src="${item.image}" alt="" />
-                              <h2>제목 :${item.title}</h2>
-                              <p>감독 :${item.director}</p>
-                              <p>개봉일 :${item.pubDate}</p>
-                              <p>평점 :${item.userRating}</p>
-                             </div>`;
-              itemContents.push($(itemHTML).get(0));
-            });
-            $(".wrap").append(itemContents);
-          },
-        });
-      });
-    </script>
+    <script src="/api/js/custom.js"></script>
   </body>
 </html>
