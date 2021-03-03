@@ -1,4 +1,12 @@
 $(function () {
+  const pathname = window.location.pathname;
+  if(pathname.includes('index')){
+    $(".gnb li").removeClass("active");
+    $(".gnb li").eq(0).addClass("active");
+  } else if(pathname.includes('recent')){
+    $(".gnb li").removeClass("active");
+    $(".gnb li").eq(1).addClass("active");}
+
   function searchMovie() {
     let searchResult = $(".searchInput").val();
     if (!searchResult) {
