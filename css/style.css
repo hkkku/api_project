@@ -1,18 +1,18 @@
 .wrap{width: 100%; min-height: 100vh; position: relative; background: url(/api/img/main_background.jpg) no-repeat; background-size: cover;}
 .wrap .searchBox{width: 30%; position: absolute; top: 50%; left: 50%; transform: translate(-140%, -50%);}
 
-header{width: 100%; height: auto; background: none;}
-.gnb{width: 100%; height: 80px;  display: flex; justify-content: flex-end; align-items: center; padding-right: 150px; margin-bottom: 30px;}
+header{width: 100%; height: 80px; background: none;}
+.gnb{width: 100%; height: 80px;  display: flex; justify-content: flex-end; align-items: center; padding-right: 150px; _margin-bottom: 30px;}
 .gnb li{float: left; margin: 0 20px;}
 
-.searchFrame{width: 40%;}
+.searchFrame{width: 40%; min-height: 100vh;}
 .searchBox h2{width: 100%; color: #2DB400; font-size: 30px;}
 .searchBox input{width: 300px; height: 50px; background: #fff; border: 8px solid #2DB400;}
 .searchBox .sendBtn{width: 70px; height: 50px; background: #2DB400; color: #fff;}
 
 .wrap.search{width: 100%; min-height: 100vh; background: url(/api/img/search_background.jpg) no-repeat; background-size: cover; display: flex;  background-attachment: fixed; position: relative; display: flex; flex-wrap: wrap;}
 .wrap.search .searchBox{ top: 30%; left: 50%; position: absolute;}
-.movie_frame{width: 60%; height: auto; display: flex; flex-wrap: wrap; padding: 30px 0; justify-content: center; align-items: center; overflow: auto;}
+.movie_frame{width: 60%; min-height: 100vh; display: flex; flex-wrap: wrap; _padding: 30px 0; justify-content: center; align-items: flex-start; overflow: auto;}
 .movie_frame .movie_box{width: 20%; height: auto; margin: 15px; position: relative; background: rgba(255, 255, 255, 0.8); display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 30px 20px;border-radius: 10%; box-shadow: 0 2px 4px rgba(0,0,0,.4);}
 
 .movie_frame .movie_box i{font-size: 20px; color: #2DB400;}
@@ -20,11 +20,17 @@ header{width: 100%; height: auto; background: none;}
 .movie_frame .movie_box h2{width: 100%; height: auto; color: #2DB400; font-size: 16px; text-align: center; margin-bottom: 10px; padding: 15px; }
 .movie_frame .movie_box .userRating{font-weight: bold;}
 
+.wrap.recent{background: url(/api/img/recent_background.jpg) no-repeat; background-size: cover;}
+.wrap.recent h2{width: 100%; text-align: center; margin-bottom: 20px; color: #2DB400; font-size: 32px;}
 .container{width: 100%; height: auto; margin: auto; max-width: 980px;}
 .recent-movie-wrap{float: left; width: 20%; padding: 10px;}
+.recent-movies{background: rgba(255, 255, 255, 0.8); padding: 20px 10px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,.4);}
 .recent-movie-wrap img{width: 100%;}
-.recent-movie-wrap h3{font-size: 12px; white-space: nowrap; text-overflow: ellipsis; width: 100%; overflow: hidden;}
+.recent-movie-wrap h3{font-size: 12px; white-space: nowrap; text-overflow: ellipsis; width: 100%; overflow: hidden; text-align: center; padding: 10px 0;}
 
-.numContainer{width: 100%; height: auto; max-width: 980px; margin: 20px auto 0;}
+.numContainer{width: 100%; height: auto; max-width: 980px; margin: 20px auto 0; padding: 10px 0; display: flex; justify-content: center; align-items: center;}
+.numBtns{font-size: 17px;}
+.numBtns button.active,
+.numBtns button.arrow{background: #2DB400; color: #fff;}
 
 .loading{width: 100%; height: 600px; display: flex; justify-content: center; align-items: center;}

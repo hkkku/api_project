@@ -15,11 +15,11 @@
     <link rel="stylesheet" href="/api/css/media.css" />
   </head>
   <body>
-    <div class="wrap">
+    <div class="wrap recent">
       <header class="clear">
         <ul class="gnb clear">
           <li><a href="/api/index.html">Home</a></li>
-          <li><a href="#">Recent</a></li>
+          <li><a href="/api/recent.html">Recent</a></li>
           <li><a href="#">Genre</a></li>
           <li><a href="#">Home</a></li>
         </ul>
@@ -27,17 +27,22 @@
       <div class="loading">
         <img src="/api/loading.gif" alt="" />
       </div>
+      <h2>Recent Movies</h2>
       <div class="container clear"></div>
       <!-- container end -->
       <div class="numContainer">
         <div class="numBtns">
-          <button type="button" class="prev">prev</button>
+          <button type="button" class="prev">
+            <i class="fa fa-arrow-left"></i>
+          </button>
           <button type="button" class="pageNum" value="1">1</button>
           <button type="button" class="pageNum" value="2">2</button>
           <button type="button" class="pageNum" value="3">3</button>
           <button type="button" class="pageNum" value="4">4</button>
           <button type="button" class="pageNum" value="5">5</button>
-          <button type="button" class="next">next</button>
+          <button type="button" class="next">
+            <i class="fa fa-arrow-right"></i>
+          </button>
         </div>
       </div>
     </div>
