@@ -3,7 +3,7 @@ $(function(){
   function getGenre(gen, box, slideID){
     let getGenres = [];
     $.ajax({
-      url :' https://yts.mx/api/v2/list_movies.json?genre='+ gen +'&page=1&limit=15',
+      url :' https://yts.mx/api/v2/list_movies.json?genre='+ gen +'&page=1&limit=20',
       success : function(data){
         console.log(data);
         for(let i = 0 ; i < data.data.movies.length; i ++){
@@ -20,16 +20,48 @@ $(function(){
                           getGenres += genreHTML;
         }
         $(box).append(getGenres);
+
+        function responsiveWidth(){
+        
+          let winW = $(window).width();
+          if(winW >= 800){
+            $(slideID).lightSlider({
+        
+              item:5,
+              slideMove:1,
+              auto:true,
+              loop:true,
+              speed:400,
+          
+            });
+          } else {
+            $(slideID).lightSlider({
+        
+              item:3,
+              slideMove:1,
+              auto:true,
+              loop:true,
+              speed:400,
+          
+            });
+          }
+        }
+
+        responsiveWidth();
+
+      var delta = 300; 
+      var timer = null;
   
-        $(slideID).lightSlider({
+      $(window).resize(function(){
+        clearTimeout( timer ); 
+        timer = setTimeout( resizeDone, delta );
+      });
       
-          item:5,
-          slideMove:1,
-          auto:true,
-          loop:true,
-          speed:400,
-      
-        });
+      function resizeDone(){ 
+        history.go(0);
+        responsiveWidth();
+      };
+  
       }
     });
   
@@ -38,4 +70,18 @@ $(function(){
   getGenre('action' , '.action-contents', '#actionSlide');
   getGenre('romance' , '.romance-contents', '#romanceSlide');
   getGenre('drama' , '.drama-contents', '#dramaSlide');
+  getGenre('comedy' , '.comedy-contents', '#comedySlide');
+  getGenre('mystery' , '.mystery-contents', '#mysterySlide');
+
+
+  $(".genre-tab .tab").click(function(){
+    let index = $(this).index();
+
+    $(".genre-tab .tab").removeClass('active');
+    $(this).addClass('active');
+    $(".genre-section>div").hide();
+    $(".genre-section>div").eq(index).show();
+  });
+
+  // $(".genre-tab .tab").eq(0).trigger("click");
 });

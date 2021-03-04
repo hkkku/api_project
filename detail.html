@@ -5,8 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!--  Awesome Font link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/api/css/reset.css" />
+    <link rel="stylesheet" href="/api/css/lightslider.css" />
+    <link rel="stylesheet" href="/api/css/style.css" />
+    <link rel="stylesheet" href="/api/css/media.css" />
   </head>
   <body>
+    <div class="wrap">
+      <header class="clear">
+        <ul class="gnb clear">
+          <li><a href="/api/index.html">Home</a></li>
+          <li><a href="/api/recent.html">Recent</a></li>
+          <li><a href="/api/genre.html">Genre</a></li>
+        </ul>
+      </header>
+      <div class="center">
+        <div class="detailWrap"></div>
+      </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
       $(function () {
@@ -16,6 +37,19 @@
           url: "https://yts.mx/api/v2/movie_details.json?movie_id=" + detailID,
           success: function (detailData) {
             console.log(detailData);
+            console.log(detailData.data.movie.title_long);
+            let detailHTML = `<div class="detail-box">
+                                <div class="detailImg">
+                                  <img src="${detailData.data.movie.large_cover_image}" alt="" />
+                                </div>
+                                <div class="detailTxt">
+                                  <h3>${detailData.data.movie.title_long}</h3>
+                                  <p class="genre">${detailData.data.movie.genres}</p>
+                                  <p class="rating">★${detailData.data.movie.rating}</p>
+                                  <p class="detailDesc">${detailData.data.movie.description_intro}</p>
+                                </div>
+                              </div>`;
+            $(".detailWrap").append(detailHTML);
           },
         });
       });
