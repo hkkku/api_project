@@ -12,7 +12,7 @@
         easing: 'ease-in', //'for jquery animation',//
         speed: 400, //ms'
         auto: false,
-        pauseOnHover: false,
+        pauseOnHover: true,
         loop: false,
         slideEndAnimation: true,
         pause: 2000,
@@ -26,7 +26,7 @@
         verticalHeight: 500,
         vThumbWidth: 100,
         thumbItem: 10,
-        pager: true,
+        pager: false,
         gallery: false,
         galleryMargin: 5,
         thumbMargin: 5,

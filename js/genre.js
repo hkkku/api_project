@@ -12,9 +12,9 @@ $(function(){
                               <img src="${data.data.movies[i].medium_cover_image}" alt="" />
                               <div class="slide-txt">
                                 <h3>${data.data.movies[i].title}</h3>
-                                <p class="rating">Rating : ${data.data.movies[i].rating}</p>
+                                <p class="rating">★${data.data.movies[i].rating}</p>
                               </div>
-                              <a href="/api/detail.html?id=${data.data.movies[i].id}">Detail View</a>
+                              <a class="detailBtn" href="/api/detail.html?id=${data.data.movies[i].id}">Detail View</a>
                             </div>
                           </div>`;
                           getGenres += genreHTML;

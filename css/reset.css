@@ -1,24 +1,21 @@
 /* google font style */
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap');
 @font-face {
-  font-family: 'NEXON Lv1 Gothic OTF';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+  font-family: 'RIDIBatang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-
 
 /* reset css */
 *{margin: 0; padding: 0; box-sizing:border-box;}
 ol , ul, li{list-style: none;}
 a{text-decoration: none; color: #555;}
-body{font-size: 14px; font-family: "NEXON Lv1 Gothic OTF", sans-serif; color: #555;}
-input[type="checkbox"]{-webkit-appearance: auto; border-radius: 0; border: 1px solid #2DB400;}
+body{font-size: 14px; font-family: "RIDIBatang", sans-serif; color: #555;}
+input[type="checkbox"]{-webkit-appearance: auto; border-radius: 0; border: 1px solid #000;}
 img{display: block;}
-button, input, textarea{outline: 0; font-family: "NEXON Lv1 Gothic OTF"; background: none; outline: 0; border: 0;}
+button, input, textarea{outline: 0; font-family: "RIDIBatang"; background: none; outline: 0; border: 0;}
 .clear::after{clear: both; display: block; content: '';} 
-.center{width: 100%; max-width: 1200px; height: auto; margin: auto;}
-input::placeholder, textarea::placeholder{color: #2DB400;}
+.center{width: 100%; max-width: 980px; height: auto; margin: auto;}
+input::placeholder, textarea::placeholder{color: #444;}
 _input:focus , textarea:focus{background: #f8f8f8;}

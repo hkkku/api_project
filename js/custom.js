@@ -5,7 +5,11 @@ $(function () {
     $(".gnb li").eq(0).addClass("active");
   } else if(pathname.includes('recent')){
     $(".gnb li").removeClass("active");
-    $(".gnb li").eq(1).addClass("active");}
+    $(".gnb li").eq(1).addClass("active");
+  } else if(pathname.includes('genre')){
+    $(".gnb li").removeClass("active");
+    $(".gnb li").eq(2).addClass("active");
+  }
 
   function searchMovie() {
     let searchResult = $(".searchInput").val();
@@ -41,7 +45,7 @@ $(function () {
     },
     success: function (data) {
       let obj = JSON.parse(data);
-      // console.log(obj);
+      console.log(obj);
       // console.log(obj.items[0].title);
 
       if (obj.items.length == 0) {
