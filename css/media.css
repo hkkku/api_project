@@ -10,14 +10,18 @@
   .wrap .backgroundImg img{width: 100%; min-height: 100%;}
 
   .searchBox input{width: 250px;}
+
+  .detailWrap .detailImg{width: 40%;}
+  .detailWrap .detailTxt{width: 60%;}
 }
 
 @media screen and (max-width:1200px){
   .searchFrame{width: 100%; height: 100px;}
-  .wrap.search .searchBox{width: 60%; top: 0; left: 0; transform: translate(10%, 0);}
   .movie_frame{width: 100%;}
   .container{display: flex; flex-wrap: wrap; justify-content: center;}
   .recent-movie-wrap{width: 30%; padding: 10px;}
+  .detailWrap .detailImg{width: 40%; height: 60%;}
+
 }
 
 @media screen and (max-width:800px){
@@ -32,10 +36,25 @@
   .gnb li{margin: 0 auto;}
   .wrap.search{flex-direction: column;}
   
-  .wrap.search .searchBox{transform: translate(45%, 0);}
+  
   .wrap.search .searchBox h2{font-size: 20px;}
 
   .movie_frame .movie_box{width: 50%;}
+  .movie_frame .movie_box .director{display: none;}
+
+  .wrap.genre .center{padding: 5px;}
+  .genre-tab{width: 100%;}
+  .genre-tab .tab p{display: none;}
+  .genre-section{margin: 0;}
+
+  .detailLogo{width: 30%;}
+  .detailWrap .detail-box{flex-wrap: wrap;}
+  .detailWrap .detailImg{width: 100%;}
+  .detailWrap .detailTxt{width: 100%; margin-top: 20px;}
+  .detailWrap .detailTxt h3{text-align: center; font-size: 20px;}
+  .detailWrap .detailTxt .genre{text-align: center;}
+  .detailWrap .detailTxt .rating{text-align: center; font-size: 16px;}
+
 }
 
 @media screen and (max-width:400px){

@@ -7,7 +7,7 @@ $(function(){
     $.ajax({
       url:"https://yts.mx/api/v2/list_movies.json?sort_by=year&order_by=desc&limit=10&page=1" + page,
       success:function(data){
-        // console.log(data.data.movies[0].title);
+        console.log(data.data.movies[0]);
         if(data.data.movies.title == ''){
           data.data.movies.title = 'No Title';
         }

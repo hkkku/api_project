@@ -3,13 +3,13 @@ $(function(){
   function getGenre(gen, box, slideID){
     let getGenres = [];
     $.ajax({
-      url :' https://yts.mx/api/v2/list_movies.json?genre='+ gen +'&page=1&limit=20',
+      url :' https://yts.mx/api/v2/list_movies.json?genre='+ gen +'&page=1&limit=25',
       success : function(data){
         console.log(data);
         for(let i = 0 ; i < data.data.movies.length; i ++){
           let genreHTML = `<div class="slide-box">
                             <div>
-                              <img src="${data.data.movies[i].medium_cover_image}" alt="" />
+                              <img src="${data.data.movies[i].medium_cover_image}" alt="" onError="this.src='/api/img/replace.jpg';"/>
                               <div class="slide-txt">
                                 <h3>${data.data.movies[i].title}</h3>
                                 <p class="rating">★${data.data.movies[i].rating}</p>
@@ -19,48 +19,39 @@ $(function(){
                           </div>`;
                           getGenres += genreHTML;
         }
+
+
+
+        
         $(box).append(getGenres);
 
-        function responsiveWidth(){
+        $(slideID).lightSlider({
         
-          let winW = $(window).width();
-          if(winW >= 800){
-            $(slideID).lightSlider({
-        
-              item:5,
-              slideMove:1,
-              auto:true,
-              loop:true,
-              speed:400,
-          
-            });
-          } else {
-            $(slideID).lightSlider({
-        
-              item:3,
-              slideMove:1,
-              auto:true,
-              loop:true,
-              speed:400,
-          
-            });
-          }
-        }
-
-        responsiveWidth();
-
-      var delta = 300; 
-      var timer = null;
-  
-      $(window).resize(function(){
-        clearTimeout( timer ); 
-        timer = setTimeout( resizeDone, delta );
-      });
+          item:5,
+          slideMove:1,
+          auto:true,
+          loop:true,
+          speed:400,
+          responsive : [
+            {
+                breakpoint:800,
+                settings: {
+                    item:3,
+                    slideMove:1,
+                    slideMargin:6,
+                  }
+            },
+            {
+                breakpoint:480,
+                settings: {
+                    item:2,
+                    slideMove:1
+                  }
+            }
+        ]
       
-      function resizeDone(){ 
-        history.go(0);
-        responsiveWidth();
-      };
+        });
+
   
       }
     });

@@ -25,6 +25,9 @@
         </ul>
       </header>
       <div class="center">
+        <div class="detailLogo">
+          <img src="/api/img/detail_logo.png" alt="" />
+        </div>
         <div class="detailWrap"></div>
       </div>
     </div>
@@ -40,13 +43,16 @@
             console.log(detailData.data.movie.title_long);
             let detailHTML = `<div class="detail-box">
                                 <div class="detailImg">
-                                  <img src="${detailData.data.movie.large_cover_image}" alt="" />
+                                  <img src="${detailData.data.movie.large_cover_image}" alt=""/>
                                 </div>
                                 <div class="detailTxt">
                                   <h3>${detailData.data.movie.title_long}</h3>
                                   <p class="genre">${detailData.data.movie.genres}</p>
                                   <p class="rating">★${detailData.data.movie.rating}</p>
                                   <p class="detailDesc">${detailData.data.movie.description_intro}</p>
+                                  <div class="goBack">
+                                    <a href="/api/genre.html"><i class="fa fa-hand-point-left"></i></a>
+                                  </div>
                                 </div>
                               </div>`;
             $(".detailWrap").append(detailHTML);
