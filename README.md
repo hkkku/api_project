@@ -16,7 +16,8 @@
 - **Recent** :    
 yts에 업로드된 최신 영화 데이터를 받아오는 API 활용   
 - **Genre** :    
-각 장르별로 구분된 slider 구현
+각 장르별로 구분된 slider 구현   
+JS tab 기능으로 장르 필터링 기능   
 
 
 ## To Do
