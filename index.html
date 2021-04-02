@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>movie</title>
+    <!-- favicon here -->
+    <link rel="shortcut icon" href="/leesle/favicon.png" type="image/x-icon" />
     <!--  Awesome Font link -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+    <!-- main style css link -->
     <link rel="stylesheet" href="/api/css/reset.css" />
     <link rel="stylesheet" href="/api/css/style.css" />
     <link rel="stylesheet" href="/api/css/media.css" />
@@ -41,8 +44,10 @@
         </div>
       </div>
     </div>
+    <!-- wrap end -->
     <!-- jquery min  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- main js link -->
     <script src="/api/js/custom.js"></script>
     <script src="/api/js/recent.js"></script>
     <script>
@@ -51,7 +56,7 @@
         $(".gnb li").removeClass("active");
         $(".gnb li").eq(index).addClass("active");
       });
-      $(".gnb li").eq(1).trigger("click");
+      $(".gnb li").eq(0).trigger("click");
     </script>
   </body>
 </html>
