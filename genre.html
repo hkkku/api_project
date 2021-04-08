@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="영화 API 검색 및 크롤링 웹사이트" />
+    <meta name="keyword" content="영화, 검색, API, 크롤링" />
+    <meta
+      name="description"
+      content="네이버 검색 API와 yts API를 활용한 영화 데이터 크롤링 및 검색 전용 웹사이트."
+    />
     <title>movie genre</title>
     <!-- favicon here -->
     <link rel="shortcut icon" href="/api/favicon.png" type="image/x-icon" />
@@ -12,9 +18,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+    <!-- reset style css link -->
     <link rel="stylesheet" href="/api/css/reset.css" />
+    <!-- lightslider plugin css link -->
     <link rel="stylesheet" href="/api/css/lightslider.css" />
+    <!-- main style css link -->
     <link rel="stylesheet" href="/api/css/style.css" />
+    <!-- media query css link -->
     <link rel="stylesheet" href="/api/css/media.css" />
   </head>
   <body>
@@ -26,6 +36,7 @@
           <li><a href="/api/genre.html">Genre</a></li>
         </ul>
       </header>
+      <!-- header end -->
       <div class="center">
         <h2>Today's Hot</h2>
         <span></span>
@@ -51,7 +62,9 @@
             <p>Mystery</p>
           </div>
         </div>
+        <!-- genre tab end -->
         <div class="genre-section">
+          <!-- api contents are here -->
           <div class="action">
             <div class="action-contents" id="actionSlide"></div>
           </div>
@@ -68,12 +81,17 @@
             <div class="mystery-contents" id="mysterySlide"></div>
           </div>
         </div>
+        <!-- genre section end -->
       </div>
+      <!-- center end -->
     </div>
     <!-- jquery min  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- main js link -->
     <script src="/api/js/custom.js"></script>
+    <!-- genre js link -->
     <script src="/api/js/genre.js"></script>
+    <!-- lightslider js link -->
     <script src="/api/js/lightslider.js"></script>
   </body>
 </html>

@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="ALL" />
+    <meta name="title" content="영화 API 검색 및 크롤링 웹사이트" />
+    <meta name="keyword" content="영화, 검색, API, 크롤링" />
     <meta
       name="description"
       content="네이버 검색 API와 yts API를 활용한 영화 데이터 크롤링 및 검색 전용 웹사이트."
     />
-    <title>movie API searching</title>
+    <title>Movie Searching</title>
     <!-- favicon here -->
     <link rel="shortcut icon" href="/api/favicon.png" type="image/x-icon" />
     <!--  Awesome Font link -->
@@ -16,13 +19,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-    <!-- main style css link -->
+    <!-- reset style css link -->
     <link rel="stylesheet" href="/api/css/reset.css" />
+    <!-- lightslider plugin css link -->
+    <link rel="stylesheet" href="/api/css/lightslider.css" />
+    <!-- main style css link -->
     <link rel="stylesheet" href="/api/css/style.css" />
+    <!-- media query css link -->
     <link rel="stylesheet" href="/api/css/media.css" />
   </head>
   <body>
     <div class="wrap">
+      <!-- all contents are in WRAP -->
       <header class="clear">
         <ul class="gnb clear">
           <li><a href="/api/index.html">Home</a></li>
@@ -30,6 +38,7 @@
           <li><a href="/api/genre.html">Genre</a></li>
         </ul>
       </header>
+      <!-- header end -->
       <div class="center">
         <div class="logoBox">
           <img src="/api/img/cinema_logo.png" alt="" />
@@ -46,7 +55,9 @@
             </button>
           </div>
         </div>
+        <!-- search box end -->
       </div>
+      <!-- center end -->
     </div>
     <!-- wrap end -->
     <!-- jquery min  -->
@@ -55,6 +66,7 @@
     <script src="/api/js/custom.js"></script>
     <script src="/api/js/recent.js"></script>
     <script>
+      // 네비게이션 active 기능
       $(".gnb li").on("click", function () {
         let index = $(this).index();
         $(".gnb li").removeClass("active");
