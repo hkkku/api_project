@@ -2,6 +2,9 @@
 네이버 및 yts 사이트의 api 데이터를 활용한 영화 검색 웹사이트
 > *http://hxxku.dothome.co.kr/api/*
 *** 
+![api_01](https://user-images.githubusercontent.com/77706795/117009190-72201600-ad26-11eb-8a3f-ba4a88d03132.gif)
+
+![api_02](https://user-images.githubusercontent.com/77706795/117009342-97148900-ad26-11eb-99cb-a4dc196ba41b.gif)
 
 ## Feature
 
