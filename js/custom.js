@@ -59,9 +59,10 @@ $(function() {
           $.each(obj.items, function(i, item) {
               let itemHTML = `<div class="movie_box">
                         <h2>${item.title}</h2>
-                        <img src="${item.image}" alt="" />
+                        <img src="${item.image}" alt="movie image" onError="this.src='/api/img/replace.jpg';"/>
                         <p class="director">${item.director} ${item.pubDate}</p>
                         <p class="userRating">★${item.userRating}</p>
+                        <button class="detailBtn" onClick="location.href='${item.link}'">Go Detail</button>
                       </div>`;
               itemContents.push($(itemHTML).get(0));
           });
